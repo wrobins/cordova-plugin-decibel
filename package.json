@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-decibel",
+  "version": "1.0.0",
+  "description": "A Cordova plugin that allows you to continuously monitor the noise level recorded by your phone's microphone in decibels.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrobins/cordova-plugin-decibel.git"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "ios",
+    "mic",
+    "audio",
+    "sound",
+    "level",
+    "meter",
+    "noise"
+  ],
+  "author": "Walter Robins",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/wrobins/cordova-plugin-decibel/issues"
+  },
+  "homepage": "https://github.com/wrobins/cordova-plugin-decibel#readme"
+}

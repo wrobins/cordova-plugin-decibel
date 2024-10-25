@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-decibel" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Cordova Decibel Plugin</name>
+    <description>A Cordova plugin that allows you to continuously monitor the noise level recorded by your phone's microphone in decibels.</description>
+    <author>Walter Robins</author>
+    <keywords>cordova,android,ios,mic,audio,sound,level,meter,noise</keywords>
+    <license>Apache 2.0</license>
+    <repo>https://github.com/wrobins/cordova-plugin-decibel.git</repo>
+    <issue>https://github.com/wrobins/cordova-plugin-decibel/issues</issue>
+    <js-module name="DecibelPlugin" src="www/DecibelPlugin.js">
+        <clobbers target="cordova.plugins.DecibelPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="DecibelPlugin">
+                <param name="android-package" value="com.wrobins.cordova.plugin.DecibelPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        </config-file>
+        <source-file src="src/android/DecibelPlugin.java" target-dir="src/com/wrobins/cordova/plugin" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="DecibelPlugin">
+                <param name="ios-package" value="DecibelPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/DecibelPlugin.swift" />
+    </platform>
+</plugin>
